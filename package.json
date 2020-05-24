@@ -8,7 +8,19 @@
     "start": "next start"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "antd": "^4.2.4",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "framer-motion": "^1.11.0",
+    "isomorphic-fetch": "^2.2.1",
+    "mongoose": "^5.9.15",
     "next": "9.4.2",
+    "nodemon": "^2.0.4",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }
