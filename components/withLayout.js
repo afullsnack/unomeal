@@ -12,9 +12,9 @@ function withLayout(BaseComponent) {
       return (
         <Layout style={{ minHeight: '100vh' }}>
           <Sider />
-          <Layout>
-            <Header />
-            <Content style={{ padding: 20 }}>
+          <Layout style={{height: '100%'}}>
+            <Header style={{ position: 'fixed', zIndex: 1, width: '100%'}} />
+            <Content style={{ padding: '78px 15px 15px 15px', height: '100%' }}>
               <BaseComponent />
             </Content>
           </Layout>

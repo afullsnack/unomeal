@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Layout from 'antd/lib/layout';
 import Link from 'next/link';
-import {motion, useAnimation} from 'framer-motion';
+import {motion } from 'framer-motion';
+import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
+import { getViewportState, watchViewport } from 'tornis';
 
 import Nav from './Navigation';
 
@@ -16,6 +18,10 @@ class MySider extends Component {
 
   onCollapse = () => {
     this.setState({ collapsed: !this.state.collapsed });
+
+    // watch viewport width
+    // let vpState = getViewportState();
+    // console.log(this.state.collapsed, vpState);
   };
 
   render() {
@@ -32,10 +38,18 @@ class MySider extends Component {
         collapsible
         collapsed={this.state.collapsed}
         onCollapse={this.onCollapse}
+        zeroWidthTriggerStyle={{
+          top: 10
+        }}
         style={{
           width: 'auto',
-          height: 'inherit',
+          height: '100%',
           display: 'fixed',
+          position: 'fixed',
+          left: 0,
+          top: 0,
+          bottom: 0,
+          zIndex: 100,
           backgroundColor: 'white'
           // flexFlow: 'column',
           // justifyContent: 'center',

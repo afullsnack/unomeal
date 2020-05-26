@@ -6983,6 +6983,11 @@ toidentifier@1.0.0:
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
   integrity sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
 
+tornis@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/tornis/-/tornis-0.3.2.tgz#4686ac5c49b0a7e12b8decb70ae925840b4b5144"
+  integrity sha512-F98xSkOE86fNkrNVs6jUk+SX5joeYKQJhlSv3vqcfHdDSLBG353mbtYJigXpzCDs9AJzl7dpxGwT4VAKNQBbWw==
+
 touch@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/touch/-/touch-3.1.0.tgz#fe365f5f75ec9ed4e56825e0bb76d24ab74af83b"

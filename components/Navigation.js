@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import Menu from 'antd/lib/menu';
-import Icon from 'antd/lib/icon';
 import Link from 'next/link';
 import Router from 'next/router';
+import { HomeOutlined, ShopOutlined, GiftOutlined, SettingOutlined} from '@ant-design/icons';
+import Badge from 'antd/lib/badge';
+
+
 
 class Nav extends Component {
   constructor(props) {
@@ -38,20 +41,21 @@ class Nav extends Component {
         }
       >
         <Menu.Item key="/home">
-          <Icon type="home" style={{ color: 'white' }} />
+          <HomeOutlined />
           <span>Home</span>
         </Menu.Item>
         <Menu.Item key="/stores">
-          <Icon type="clock-circle" style={{ color: 'white' }} />
+          <ShopOutlined />
           <span>Stores</span>
         </Menu.Item>
         <Menu.Item key="/order">
-          {/* Add a custom fireworks icon */}
-          <Icon type="star" style={{ color: 'white' }} />
-          <span>Order</span>
+          <GiftOutlined />
+          <Badge dot style={{ right: -5}}>
+            <span>Order</span>
+          </Badge>
         </Menu.Item>
         <Menu.Item key="/settings">
-          <Icon type="arrow-up" style={{ color: 'white' }} />
+          <SettingOutlined />
           <span>Settings</span>
         </Menu.Item>
       </Menu>
