@@ -20,7 +20,7 @@ class Index extends Component {
             </Head>
             <Col span={24} style={{padding: 50}}>
                <h1>This is stores index page</h1>
-               <Link href="/home">HOME</Link>
+               <Link href="/home"><a>HOME</a></Link>
             </Col>
          </Row>
       )
