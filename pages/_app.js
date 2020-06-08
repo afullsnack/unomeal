@@ -5,7 +5,9 @@ import React from 'react';
 // import '../styles/style.css';
 import 'antd/dist/antd.min.css';
 
-
+// export function reportWebVitals(metric) {
+//   console.log(metric);
+// }
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

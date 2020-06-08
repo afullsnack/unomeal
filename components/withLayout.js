@@ -18,7 +18,7 @@ function withLayout(BaseComponent) {
             <Header style={{ position: 'fixed', zIndex: 1, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'end'}}>
               <HeadItems />
             </Header>
-            <Content style={{ padding: '78px 15px 15px 15px', height: '100%' }}>
+            <Content style={{ padding: '78px 10px 10px 10px', height: '100%' }}>
               <BaseComponent {...this.props} />
             </Content>
             <Footer >
