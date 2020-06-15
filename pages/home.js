@@ -37,7 +37,6 @@ function SlideOneImg(props) {
 }
 
 class Home extends Component {
-   
 
    render() {
       return(
@@ -68,20 +67,20 @@ class Home extends Component {
                      justifyContent: 'space-around'
                   }}>
                      <div style={{textAlign: 'center'}}>
-                        <GitlabOutlined style={{color: 'black', fontSize: 44, marginBottom: 6}} />
-                        <h3>Snacks</h3>
+                        <GitlabOutlined style={{color: '#ff5900', fontSize: 40, marginBottom: 6}} />
+                        <h3 style={{color: '#ff5900', fontWeight: 'bolder'}}>Snacks</h3>
                      </div>
                      <div style={{textAlign: 'center'}}>
-                        <GithubOutlined style={{color: 'black', fontSize: 44, marginBottom: 6}}/>
-                        <h3>Local</h3>
+                        <GithubOutlined style={{color: '#ff5900', fontSize: 40, marginBottom: 6}}/>
+                        <h3 style={{color: '#ff5900', fontWeight: 'bolder'}}>Local</h3>
                      </div>
                      <div style={{textAlign: 'center'}}>
-                        <InstagramOutlined style={{color: 'black', fontSize: 44, marginBottom: 6}}/>
-                        <h3>Wings</h3>
+                        <InstagramOutlined style={{color: '#ff5900', fontSize: 40, marginBottom: 6}}/>
+                        <h3 style={{color: '#ff5900', fontWeight: 'bolder'}}>Wings</h3>
                      </div>
                      <div style={{textAlign: 'center'}}>
-                        <TwitterOutlined style={{color: 'black', fontSize: 44, marginBottom: 6}}/>
-                        <h3>Drinks</h3>
+                        <TwitterOutlined style={{color: '#ff5900', fontSize: 40, marginBottom: 6}}/>
+                        <h3 style={{color: '#ff5900', fontWeight: 'bolder'}}>Drinks</h3>
                      </div>
                   </div>
                </Col>
@@ -100,7 +99,7 @@ class Home extends Component {
                      backgroundPosition: '0 -100px',
                      backgroundRepeat: 'no-repeat',
                      backgroundSize: 'contain',
-                     borderBottom: '1px solid grey'
+                     borderBottom: '3px dashed #ff5900'
                   }}>
                      <div style={{
                         display: 'flex',
@@ -122,22 +121,22 @@ class Home extends Component {
             <Row gutter={[8, 8]} style={{padding: 0, margin: 0, marginTop: 20, height: '100%'}}>
                <Col xs={{span: 12}} sm={{span: 12}} md={{span: 8}} lg={{span: 6}} style={{height: '100%'}}>
                   <Card hoverable bordered cover={<img src="/rice/fried-rice.jpg" width="100%" height="150px"  />}>
-                     <Card.Meta title="Product Name" description="N 5200" avatar={<Button type="primary" size="large" shape="circle"><PlusOutlined style={{}} /></Button>} />
+                     <Card.Meta title="Product Name" description="N 5200" avatar={<Button type="primary" size="large" style={{backgroundColor: '#ff5900'}} shape="circle"><PlusOutlined style={{}} /></Button>} />
                   </Card>
                </Col>
                <Col xs={{span: 12}} sm={{span: 12}} md={{span: 8}} lg={{span: 6}} style={{height: '100%'}}>
                   <Card hoverable bordered cover={<img src="/local/egusi-soup-img.jpg" width="100%" height="100%"  />}>
-                     <Card.Meta title="Product Name" description="N 5200" avatar={<Button type="primary" size="large" shape="circle"><PlusOutlined style={{}} /></Button>} />
+                     <Card.Meta title="Product Name" description="N 5200" avatar={<Button type="primary" size="large" style={{backgroundColor: '#ff5900'}} shape="circle"><PlusOutlined style={{}} /></Button>} />
                   </Card>
                </Col>
                <Col xs={{span: 12}} sm={{span: 12}} md={{span: 8}} lg={{span: 6}} style={{height: '100%'}}>
                   <Card hoverable bordered cover={<img src="/rice/fried-rice.jpg" width="100%"  />}>
-                     <Card.Meta title="Product Name" description="N 5200" avatar={<Button type="primary" size="large" shape="circle"><PlusOutlined style={{}} /></Button>} />
+                     <Card.Meta title="Product Name" description="N 5200" avatar={<Button type="primary" size="large" style={{backgroundColor: '#ff5900'}} shape="circle"><PlusOutlined style={{}} /></Button>} />
                   </Card>
                </Col>
                <Col xs={{span: 12}} sm={{span: 12}} md={{span: 8}} lg={{span: 6}} style={{height: '100%'}}>
                   <Card hoverable bordered cover={<img src="/rice/fried-rice.jpg" width="100%"  />}>
-                     <Card.Meta title="Product Name" description="N 5200" avatar={<Button type="primary" size="large" shape="circle"><PlusOutlined style={{}} /></Button>} />
+                     <Card.Meta title="Product Name" description="N 5200" avatar={<Button type="primary" size="large" style={{backgroundColor: '#ff5900'}} shape="circle"><PlusOutlined style={{}} /></Button>} />
                   </Card>
                </Col>
             </Row>

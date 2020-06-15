@@ -10,7 +10,6 @@ import Divider from 'antd/lib/divider';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-
 class Stores extends Component {
 
    render() {
@@ -21,14 +20,14 @@ class Stores extends Component {
                   <Card>
                      <h1 style={{
                         fontSize: '2rem'
-                     }}>Well curated and vetted menu's from the best kitchens and chefs in town</h1>
+                     }}>Menu's from the best kitchens and chefs in town</h1>
                      <a href="#">Check out our social media pages <ArrowRightOutlined/></a>
                      <Divider orientation="center" ></Divider>
                      <Button type="ghost" style={{
                         textAlign: 'left',
                         width: 120
                      }}>Join Us
-                        <motion.i animate={{marginLeft: [12, 3, 12]}} initial={{marginLeft: 3}} transition={{loop: Infinity}}>
+                        <motion.i animate={{marginLeft: [12, 3, 12]}} initial={{marginLeft: 3}} transition={{loop: Infinity, repeatDelay: 1.65}}>
                               <ArrowRightOutlined style={{ padding: 0, marginLeft: 20}} />
                         </motion.i>
                      </Button>

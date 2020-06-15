@@ -15,7 +15,7 @@ function HeadItems(props) {
             padding: 10,
             cursor: 'pointer'
          }}>
-            <Badge count={2}>
+            <Badge count={props.cartTotalQty}>
                <ShoppingOutlined style={{color: 'white', fontSize: 24 }} />
             </Badge>
          </div>

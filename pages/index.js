@@ -9,10 +9,12 @@ import Link from 'next/link';
 import withLayout from '../components/withLayout';
 
 
+
 class Index extends Component {
    
 
    render() {
+
       return(
          <Row style={{width: '100%', height: '100%', backgroundColor: 'yellow'}}>
             <Head>
