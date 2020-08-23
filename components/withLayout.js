@@ -38,7 +38,7 @@ function withLayout(BaseComponent) {
 
     }
 
-    addToCart = async (item) => {
+    addToCart = async (item, qty, store_id) => {
       // e.preventDefault();
       // console.log("ITEM", item);
       try {
@@ -54,10 +54,11 @@ function withLayout(BaseComponent) {
                name: item.name,
                price,
                variation: item.variation,
-               qty: 1,
+               qty,
                totalPrice: price,
                options: null,
-               prodId: item.id
+               prodId: item.id,
+               store_id
             })
          }).then(response => response.json());
          this.setState({ cartTotalQty: resp.totalQty });
@@ -88,10 +89,10 @@ function withLayout(BaseComponent) {
         <Layout style={{ minHeight: '100vh' }}>
           <Sider />
           <Layout style={{height: '100%'}}>
-            <Header style={{ position: 'fixed', zIndex: 1, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'end'}}>
+            <Header style={{ position: 'fixed', zIndex: 1, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'end', backgroundColor: '#ff5900'}}>
               <HeadItems cartTotalQty={this.state.cartTotalQty} />
             </Header>
-            <Content style={{ padding: '78px 10px 10px 10px', height: '100%' }}>
+            <Content style={{ padding: '78px 10px 10px 10px', height: '100%', backgroundColor: '#EEEEEE'}}>
               <BaseComponent {...this.props} {...this.state} addToCart={this.addToCart} />
             </Content>
             <Footer >

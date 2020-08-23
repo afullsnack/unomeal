@@ -5,6 +5,8 @@ import {motion } from 'framer-motion';
 import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 import { getViewportState, watchViewport } from 'tornis';
 
+import Button from 'antd/lib/button';
+
 import Nav from './Navigation';
 
 const { Sider } = Layout;
@@ -39,7 +41,8 @@ class MySider extends Component {
         collapsed={this.state.collapsed}
         onCollapse={this.onCollapse}
         zeroWidthTriggerStyle={{
-          top: 10
+          top: 10,
+          backgroundColor: 'transparent'
         }}
         style={{
           width: 'auto',
@@ -78,6 +81,8 @@ class MySider extends Component {
         </Link>
         {/* <Search /> */}
         <Nav />
+
+        <Button type="primary" size="default">LOG IN</Button>
       </Sider>
     )
   }

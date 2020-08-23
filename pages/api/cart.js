@@ -27,11 +27,12 @@ function handler (req, res) {
                   qty,
                   totalPrice,
                   options,
-                  prodId
+                  prodId,
+                  store_id
                }
             } = req;
    
-            cart.add({ name, price, variation, id: prodId }, prodId, qty, totalPrice, options);
+            cart.add({ name, price, variation, id: prodId }, prodId, qty, totalPrice, options, store_id);
             req.session.cart = cart;
    
             res.status(200).json({cartItems: cart.generateArray(), totalPrice: cart.totalPrice, totalQty: cart.totalQty, message: "DONE"});

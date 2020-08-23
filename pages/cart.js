@@ -6,25 +6,26 @@ import List from 'antd/lib/list';
 import Card from 'antd/lib/card';
 import Link from 'next/link';
 import 'isomorphic-fetch';
+import cart from './api/cart';
 
 const items = [
    {
-      "title": "Product name",
+      "name": "Product name",
       "price": 2300,
       "options": "Mini text, mini text, really mini text"
    },
    {
-      "title": "Product name",
+      "name": "Product name",
       "price": 2300,
       "options": "Mini text, mini text, really mini text"
    },
    {
-      "title": "Product name",
+      "name": "Product name",
       "price": 2300,
       "options": "Mini text, mini text, really mini text"
    },
    {
-      "title": "Product name",
+      "name": "Product name",
       "price": 2300,
       "options": "Mini text, mini text, really mini text"
    },
@@ -32,9 +33,16 @@ const items = [
 
 
 class Cart extends Component {
+   state = {
+      items: null,
+      isLoading: true,
+      totalPrice: 0
+   };
 
-  async  componentDidMount(){
+   async  componentDidMount(){
       const res = await fetch("/api/cart").then(response => response.json());
+      this.setState({ items: res.cartItems, isLoading: false, totalPrice: res.totalPrice });
+
       console.log(res);
    }
 
@@ -44,16 +52,16 @@ class Cart extends Component {
          <>
             <Row gutter={8} style={{margin: 0, padding: 0, width: '100%'}}>
                <Col span={24}>
-                  <Card title="Mama Oriental" headStyle={{backgroundColor: '#656', color: 'white'}}>
+                  <Card loading={this.state.isLoading} extra={<p style={{color: '#ff5900', margin: 0, padding: 0}}>{this.state.totalPrice}</p>} title="Items In Cart" headStyle={{color: '#ff5900', borderColor: '#ff5900'}}>
                      <List
-                        dataSource={items}
+                        dataSource={this.state.items}
                         itemLayout="vertical"
                         // bordered
                         size="small"
-                        footer={<div style={{textAlign: 'right'}}><Link href="/stores" passHref><a>Add more items</a></Link></div>}
+                        footer={<div style={{textAlign: 'right'}}><Link href="/stores" passHref><a style={{color: '#ff5900'}}>Add more items</a></Link></div>}
                         renderItem={item => (
-                           <List.Item  extra={item.price}>
-                              <List.Item.Meta title={item.title} description={item.options} />
+                           <List.Item  extra={item.qty + "x " +item.price}>
+                              <List.Item.Meta title={item.item.name} description={item.storeId} />
                            </List.Item>
                         )}
                       />

@@ -19,8 +19,8 @@ class Stores extends Component {
                <Col xs={{span: 24}} sm={{span: 24}}>
                   <Card>
                      <h1 style={{
-                        fontSize: '2rem'
-                     }}>Menu's from the best kitchens and chefs in town</h1>
+                        fontSize: '1.8rem'
+                     }}>Menu's from the best kitchens and chefs around you!</h1>
                      <a href="#">Check out our social media pages <ArrowRightOutlined/></a>
                      <Divider orientation="center" ></Divider>
                      <Button type="ghost" style={{
