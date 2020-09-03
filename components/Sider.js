@@ -95,29 +95,29 @@ class MySider extends Component {
           style={{
             padding: 20,
             backgroundColor: "white",
-            border: "1px solid lightblue",
+            border: "1px solid #ff5900",
             borderRadius: 5,
-            color: "blue",
+            color: "#ff5900",
             margin: "5%",
           }}
         >
           <span>Join Our Program</span>
-          <h3 style={{ color: "blue" }}>
+          <h3 style={{ color: "#ff5900", margin: 0, padding: 0 }}>
             SIGN UP <ArrowRightOutlined />
           </h3>
         </div>
         <div
           style={{
             padding: 20,
-            backgroundColor: "blue",
-            border: "1px solid lightblue",
+            backgroundColor: "#ff5900",
+            // border: "1px solid lightblue",
             borderRadius: 5,
             color: "white",
             margin: "5%",
           }}
         >
           <span>Have an Account?</span>
-          <h3 style={{ color: "white" }}>
+          <h3 style={{ color: "white", margin: 0, padding: 0 }}>
             LOG IN <ArrowRightOutlined />
           </h3>
         </div>

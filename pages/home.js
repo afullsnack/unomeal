@@ -51,7 +51,7 @@ class Home extends Component {
   render() {
     return (
       <>
-        <Row style={{ padding: 0, margin: 0, height: "100%" }}>
+        <Row style={{ padding: 0, margin: 0, width: "100%" }}>
           <Col xs={{ span: 24 }} sm={{ span: 24 }} style={{ height: "100%" }}>
             <Carousel
               style={{ height: "100%" }}
@@ -81,7 +81,7 @@ class Home extends Component {
             </Carousel>
           </Col>
         </Row>
-        <Row style={{ padding: 0, margin: 0, marginTop: 20, height: "100%" }}>
+        <Row style={{ padding: 0, margin: 0, marginTop: 20, width: "100%" }}>
           <Col xs={{ span: 24 }} sm={{ span: 24 }} style={{ height: "100%" }}>
             <div
               style={{
@@ -128,7 +128,7 @@ class Home extends Component {
             </div>
           </Col>
         </Row>
-        <Row style={{ padding: 0, margin: "20px 0", height: "100%" }}>
+        <Row style={{ padding: 0, margin: "20px 0", width: "100%" }}>
           <Col xs={{ span: 24 }} sm={{ span: 24 }} style={{ height: "100%" }}>
             <div
               style={{
@@ -167,7 +167,7 @@ class Home extends Component {
         </Row>
         <Row
           gutter={[8, 8]}
-          style={{ padding: 0, margin: 0, marginTop: 20, height: "100%" }}
+          style={{ padding: 0, margin: 0, marginTop: 20, width: "100%" }}
         >
           <Col
             xs={{ span: 12 }}

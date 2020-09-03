@@ -4,6 +4,9 @@ import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import Card from "antd/lib/card";
 import Button from "antd/lib/button";
+import Tooltip from "antd/lib/tooltip";
+import Collapse from "antd/lib/collapse";
+import Avatar from "antd/lib/avatar";
 import {
   ShareAltOutlined,
   StarOutlined,
@@ -13,8 +16,6 @@ import {
   EnvironmentOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
-import Tooltip from "antd/lib/tooltip";
-import Collapse from "antd/lib/collapse";
 
 import "isomorphic-fetch";
 import { applySession } from "next-session";
@@ -104,11 +105,32 @@ class SingleStore extends Component {
 
     return (
       <>
-        <Row style={{ width: "100%", marginBottom: 32 }}>
+        <Row style={{ width: "100%", marginBottom: 35 }}>
           <Col xs={{ span: 24 }} sm={{ span: 24 }}>
-            <Card cover={<img src="/sides/bbq-chicken-wings.png" />}>
-              <Card.Meta title="Store name" style={{ fontWeight: "bolder" }} />
-            </Card>
+            <Card
+              cover={
+                <div style={{ width: "100%", height: 230 }}>
+                  <img
+                    src="/sides/bbq-chicken-wings.png"
+                    style={{
+                      position: "absolute",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  />
+                  <Avatar
+                    src="/favicon.png"
+                    size={85}
+                    style={{
+                      border: "4px solid white",
+                      position: "absolute",
+                      bottom: -20,
+                      left: "5%",
+                    }}
+                  />
+                </div>
+              }
+            ></Card>
           </Col>
         </Row>
         <Row style={{ width: "100%", marginBottom: 32 }}>
@@ -290,10 +312,11 @@ class SingleStore extends Component {
           style={{ width: "100%", margin: "0 0 32px 0", padding: 0 }}
         >
           <Col span={24}>
-            <ReviewCard />
-            <ReviewBox />
+            <ReviewCard username="" rating={0} review="" featured={null} />
+            {/* <ReviewBox /> */}
           </Col>
         </Row>
+        <style jsx global>{``}</style>
       </>
     );
   }

@@ -5,53 +5,65 @@ import Col from "antd/lib/col";
 import Button from "antd/lib/button";
 import Avatar from "antd/lib/avatar";
 import Divider from "antd/lib/divider";
+import Rate from "antd/lib/rate";
 
-function ReviewCard({ childre, props }) {
+function ReviewCard({ rating, review, username, featured }) {
   return (
-    <Card>
+    <Card
+      actions={
+        review == ""
+          ? [
+              <Button type="link" style={{ color: "#ff5900" }}>
+                ADD REVIEW
+              </Button>,
+            ]
+          : null
+      }
+    >
       <Card.Meta
-        avatar={<Avatar shape="cirular" size={55} src="/favicon.png" />}
+        avatar={<Avatar shape="cirular" size={65} src="/favicon.png" />}
         style={{
           marginBottom: 10,
         }}
-        title="Users Name"
-        description="4.2 - Pretty Awesome"
+        title={username == "" ? "No reviewer" : username}
+        description={<Rate defaultValue={rating} allowHalf disabled />}
       />
       <Divider orientation="horizontal" />
       <p>
-        Lorem ipsum dolor sit amet, this is a samle review information from a
-        user that have dropped a review for this store
+        {review == "" ? "No reviews yet, be the first to add one." : review}
       </p>
       <Divider orientation="horizontal" />
-      <div
-        style={{
-          display: "flex",
-          flexFlow: "row",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <Avatar
-          shape="square"
-          style={{ flex: 1, margin: "0 5px", height: "auto" }}
-          src="/favicon.png"
-        />
-        <Avatar
-          shape="square"
-          style={{ flex: 1, margin: "0 5px", height: "auto" }}
-          src="/favicon.png"
-        />
-        <Avatar
-          shape="square"
-          style={{ flex: 1, margin: "0 5px", height: "auto" }}
-          src="/favicon.png"
-        />
-        <Avatar
-          shape="square"
-          style={{ flex: 1, margin: "0 5px", height: "auto" }}
-          src="/favicon.png"
-        />
-      </div>
+      {review == "" ? null : (
+        <div
+          style={{
+            display: "flex",
+            flexFlow: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <Avatar
+            shape="square"
+            style={{ flex: 1, margin: "0 5px", height: "auto" }}
+            src="/favicon.png"
+          />
+          <Avatar
+            shape="square"
+            style={{ flex: 1, margin: "0 5px", height: "auto" }}
+            src="/favicon.png"
+          />
+          <Avatar
+            shape="square"
+            style={{ flex: 1, margin: "0 5px", height: "auto" }}
+            src="/favicon.png"
+          />
+          <Avatar
+            shape="square"
+            style={{ flex: 1, margin: "0 5px", height: "auto" }}
+            src="/favicon.png"
+          />
+        </div>
+      )}
     </Card>
   );
 }
