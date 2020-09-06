@@ -3,13 +3,7 @@ import Head from "next/head";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import Carousel from "antd/lib/carousel";
-import {
-  GithubOutlined,
-  GitlabOutlined,
-  InstagramOutlined,
-  TwitterOutlined,
-  PlusOutlined,
-} from "@ant-design/icons";
+import { GithubOutlined, GitlabOutlined, GiftFilled } from "@ant-design/icons";
 import Card from "antd/lib/card";
 import Avatar from "antd/lib/avatar";
 import Button from "antd/lib/button";
@@ -81,7 +75,7 @@ class Home extends Component {
             </Carousel>
           </Col>
         </Row>
-        <Row style={{ padding: 0, margin: 0, marginTop: 20, width: "100%" }}>
+        <Row style={{ padding: 0, margin: 0, marginTop: 40, width: "100%" }}>
           <Col xs={{ span: 24 }} sm={{ span: 24 }} style={{ height: "100%" }}>
             <div
               style={{
@@ -93,76 +87,182 @@ class Home extends Component {
                 justifyContent: "space-around",
               }}
             >
-              <div style={{ textAlign: "center" }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  padding: "10px 26px",
+                  border: "1px solid #ff5900",
+                  borderRadius: 10,
+                  cursor: "pointer",
+                }}
+              >
                 <GitlabOutlined
-                  style={{ color: "#ff5900", fontSize: 40, marginBottom: 6 }}
+                  style={{ color: "#ff5900", fontSize: 30, marginBottom: 6 }}
                 />
-                <h3 style={{ color: "#ff5900", fontWeight: "bolder" }}>
-                  Snacks
+                <h3
+                  style={{
+                    color: "#ff5900",
+                    fontWeight: "bolder",
+                    margin: 0,
+                    padding: 0,
+                  }}
+                >
+                  READY TO EAT
                 </h3>
               </div>
-              <div style={{ textAlign: "center" }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  padding: "10px 24px",
+                  border: "1px solid #ff5900",
+                  borderRadius: 10,
+                  backgroundColor: "#ff5900",
+                  cursor: "pointer",
+                }}
+              >
                 <GithubOutlined
-                  style={{ color: "#ff5900", fontSize: 40, marginBottom: 6 }}
+                  style={{ color: "#FFF", fontSize: 30, marginBottom: 6 }}
                 />
-                <h3 style={{ color: "#ff5900", fontWeight: "bolder" }}>
-                  Local
-                </h3>
-              </div>
-              <div style={{ textAlign: "center" }}>
-                <InstagramOutlined
-                  style={{ color: "#ff5900", fontSize: 40, marginBottom: 6 }}
-                />
-                <h3 style={{ color: "#ff5900", fontWeight: "bolder" }}>
-                  Wings
-                </h3>
-              </div>
-              <div style={{ textAlign: "center" }}>
-                <TwitterOutlined
-                  style={{ color: "#ff5900", fontSize: 40, marginBottom: 6 }}
-                />
-                <h3 style={{ color: "#ff5900", fontWeight: "bolder" }}>
-                  Drinks
+                <h3
+                  style={{
+                    color: "#FFF",
+                    fontWeight: "bolder",
+                    margin: 0,
+                    padding: 0,
+                  }}
+                >
+                  MADE TO ORDER
                 </h3>
               </div>
             </div>
           </Col>
         </Row>
-        <Row style={{ padding: 0, margin: "20px 0", width: "100%" }}>
-          <Col xs={{ span: 24 }} sm={{ span: 24 }} style={{ height: "100%" }}>
-            <div
-              style={{
-                width: "100%",
-                height: "280px",
-                padding: "0 20px",
-                display: "flex",
-                flexFlow: "column",
-                alignContent: "center",
-                justifyContent: "center",
-                backgroundImage: "url('/rice/white-rice-&-bangastew.jpg')",
-                backgroundPosition: "0 -100px",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                borderBottom: "3px dashed #ff5900",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  flexFlow: "row",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "100%",
-                  height: 150,
-                  backgroundColor: "white",
-                }}
-              >
-                <div style={{ flex: 1 }}></div>
-                <div style={{ flex: 1 }}>
-                  <h3>Top Offer Here</h3>
+        <Row
+          gutter={[8, 64]}
+          style={{
+            padding: 0,
+            marginTop: 20,
+            width: "100%",
+            marginBottom: 80,
+          }}
+        >
+          <Col xs={{ span: 24 }} lg={{ span: 12 }} style={{ margin: 0 }}>
+            <Card
+              bodyStyle={{ padding: 0 }}
+              cover={
+                <div
+                  style={{
+                    width: "100%",
+                    height: "280px",
+                    padding: "0 20px",
+                    display: "flex",
+                    flexFlow: "column",
+                    alignContent: "center",
+                    justifyContent: "end",
+                    backgroundImage: "url('/rice/white-rice-&-bangastew.jpg')",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    // borderBottom: "3px dashed #ff5900",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      flexFlow: "row",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "100%",
+                      padding: 20,
+                      // height: 150,
+                      backgroundColor: "white",
+                      border: "2px solid #ff5900",
+                      borderRadius: 100,
+                      position: "relative",
+                      bottom: -34,
+                      left: 0,
+                      right: 0,
+                    }}
+                  >
+                    <div
+                      style={{
+                        flex: 1,
+                      }}
+                    >
+                      <GiftFilled
+                        style={{
+                          fontSize: 75,
+                          position: "absolute",
+                          top: -30,
+                          left: "19%",
+                          color: "#ff5600",
+                        }}
+                      />
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <h3>Top Offer Here</h3>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              }
+            ></Card>
+          </Col>
+          <Col xs={{ span: 24 }} lg={{ span: 12 }} style={{ margin: 0 }}>
+            <Card
+              bodyStyle={{ padding: 0 }}
+              cover={
+                <div
+                  style={{
+                    width: "100%",
+                    height: "280px",
+                    padding: "0 20px",
+                    display: "flex",
+                    flexFlow: "column",
+                    alignContent: "center",
+                    justifyContent: "end",
+                    backgroundImage: "url('/rice/white-rice-&-bangastew.jpg')",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    // borderBottom: "3px dashed #ff5900",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      flexFlow: "row",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "100%",
+                      padding: 20,
+                      // height: 150,
+                      backgroundColor: "white",
+                      border: "2px solid #ff5900",
+                      borderRadius: 100,
+                      position: "relative",
+                      bottom: -34,
+                      left: 0,
+                      right: 0,
+                    }}
+                  >
+                    <div style={{ flex: 1 }}>
+                      <GiftFilled
+                        style={{
+                          fontSize: 75,
+                          position: "absolute",
+                          top: -30,
+                          left: "19%",
+                          color: "#ff5600",
+                        }}
+                      />
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <h3>Top Offer Here</h3>
+                    </div>
+                  </div>
+                </div>
+              }
+            ></Card>
           </Col>
         </Row>
         <Row
@@ -180,23 +280,10 @@ class Home extends Component {
               hoverable
               bordered
               cover={
-                <img src="/rice/fried-rice.jpg" width="100%" height="150px" />
+                <img src="/rice/fried-rice.jpg" width="100%" height="130px" />
               }
             >
-              <Card.Meta
-                title="Product Name"
-                description="N 5200"
-                avatar={
-                  <Button
-                    type="primary"
-                    size="large"
-                    style={{ backgroundColor: "#ff5900" }}
-                    shape="circle"
-                  >
-                    <PlusOutlined style={{}} />
-                  </Button>
-                }
-              />
+              <Card.Meta title="Product Name" description="N 5200" />
             </Card>
           </Col>
           <Col
@@ -213,24 +300,11 @@ class Home extends Component {
                 <img
                   src="/local/egusi-soup-img.jpg"
                   width="100%"
-                  height="100%"
+                  height="130px"
                 />
               }
             >
-              <Card.Meta
-                title="Product Name"
-                description="N 5200"
-                avatar={
-                  <Button
-                    type="primary"
-                    size="large"
-                    style={{ backgroundColor: "#ff5900" }}
-                    shape="circle"
-                  >
-                    <PlusOutlined style={{}} />
-                  </Button>
-                }
-              />
+              <Card.Meta title="Product Name" description="N 5200" />
             </Card>
           </Col>
           <Col
@@ -243,22 +317,11 @@ class Home extends Component {
             <Card
               hoverable
               bordered
-              cover={<img src="/rice/fried-rice.jpg" width="100%" />}
+              cover={
+                <img src="/rice/fried-rice.jpg" width="100%" height="130px" />
+              }
             >
-              <Card.Meta
-                title="Product Name"
-                description="N 5200"
-                avatar={
-                  <Button
-                    type="primary"
-                    size="large"
-                    style={{ backgroundColor: "#ff5900" }}
-                    shape="circle"
-                  >
-                    <PlusOutlined style={{}} />
-                  </Button>
-                }
-              />
+              <Card.Meta title="Product Name" description="N 5200" />
             </Card>
           </Col>
           <Col
@@ -271,22 +334,11 @@ class Home extends Component {
             <Card
               hoverable
               bordered
-              cover={<img src="/rice/fried-rice.jpg" width="100%" />}
+              cover={
+                <img src="/rice/fried-rice.jpg" width="100%" height="130px" />
+              }
             >
-              <Card.Meta
-                title="Product Name"
-                description="N 5200"
-                avatar={
-                  <Button
-                    type="primary"
-                    size="large"
-                    style={{ backgroundColor: "#ff5900" }}
-                    shape="circle"
-                  >
-                    <PlusOutlined style={{}} />
-                  </Button>
-                }
-              />
+              <Card.Meta title="Product Name" description="N 5200" />
             </Card>
           </Col>
         </Row>
