@@ -49,6 +49,8 @@ export default function StoreHeader() {
           margin-bottom: 20px;
           padding: 0;
           line-height: 0px;
+          font-weight: bolder;
+          font-size: .9rem;
         }
         div.store-info > span {
           padding: 0;

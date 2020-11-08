@@ -6,11 +6,15 @@ import Radio from 'ui/radio';
 import Button from 'ui/button';
 import Select from 'ui/select';
 import withStoreLayout from 'components/store/withStoreLayout';
+import Link from 'next/link';
+// import { useRouter } from 'next/router';
 
 const { Option } = Select;
 
-function singleStore({params}) {
+function StoreIndex({store_id}) {
 
+  console.assert(store_id != 'undefined' || store_id != null, 'Store ID does not exist');
+  console.log(store_id);
   return (
     <>
       <div style={{
@@ -58,12 +62,28 @@ function singleStore({params}) {
                   justifyContent: 'center',
                   margin: '20px 0',
                 }}>
-                  <Button type="link" style={{color: '#ff3562'}}>View menu</Button> <b>or</b> <Button type="link" style={{color: '#ff3562'}}>Buy gift card</Button>
+                  <Link href={`./${store_id}/menu`}><a style={{color: '#ff3562', padding: 10}}>View menu</a></Link> <b>or</b> <Button type="link" style={{color: '#ff3562'}}>Buy gift card</Button>
                 </div>
               </Card>
             </Col>
             <Col xs={{span: 24}} sm={{span: 24}} lg={{span: 12}} xl={{span: 12}}>
               <Card bordered={false} style={{background: '#ff3562', height: '100%'}}></Card>
+            </Col>
+          </Row>
+          <Row gutter={16} style={{margin: 0, padding: 0, marginTop: 60}}>
+            <Col xs={{span: 24}} sm={{span: 24}} lg={{span: 12}} xl={{span: 12}}>
+              <Card title="Location" bordered={false}>
+                <p>Long store address, full</p>
+                <p><Link href="#" passHref><a style={{color: '#ff3562'}}>Driving Directions</a></Link> / <b>1.36mi</b></p>
+                <p><b>(535) 512 873</b></p>
+              </Card>
+            </Col>
+            <Col xs={{span: 24}} sm={{span: 24}} lg={{span: 12}} xl={{span: 12}}>
+              <Card title="Today's Hours" bordered={false}>
+                <p>Pickup <b style={{float: 'right', overflow: "hidden"}}>10:00am - 9:00pm</b></p>
+                <p>Delivery <b style={{float: 'right', overflow: "hidden"}}>11:00am - 8:00pm</b></p>
+                <p><Link href="#" passHref><a style={{color: '#ff3562'}}>See Full Schedule</a></Link></p>
+              </Card>
             </Col>
           </Row>
         </Col>
@@ -77,14 +97,13 @@ function singleStore({params}) {
     </>
   )
 }
-export async function getServerSideProps({ params }) {
 
-  return {
-    props: {
-      params,
-    }
-  };
+
+export async function getServerSideProps ({ params }) {
+
+  const { store_id } = params;
+  return { props: { store_id } }
 
 }
 
-export default withStoreLayout(singleStore);
+export default withStoreLayout(StoreIndex);
