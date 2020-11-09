@@ -15,10 +15,10 @@ export default function withStoreLayout(Component) {
 
     return (
       <Layout style={{ minHeight: '100vh' }}>
-        <Header style={{ padding: '5px 10%', minHeight: 64, height: 'auto', background: '#FFFFFF'}}>
+        <Header style={{ padding: '5px 10%', minHeight: 64, height: 'auto', background: '#FFFFFF', position: 'fixed', zIndex: 1, width: '100%'}}>
           <StoreHeader />
         </Header>
-        <Content style={{ background: '#FFF', position: 'relative', padding: '0 5px', }}>
+        <Content style={{ background: '#FFF', position: 'relative', padding: '0 5px', marginTop: 70 }}>
           <Component {...props} />
         </Content>
       </Layout>
