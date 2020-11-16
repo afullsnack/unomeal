@@ -1,25 +1,28 @@
-import {} from "react";
+import { useState } from "react";
 import Row from "ui/row";
 import Col from "ui/col";
 import Button from "ui/button";
+import Empty from 'ui/empty';
 import Modal from "ui/modal";
 import Tabs from "ui/tabs";
 import Card from "ui/card";
 import Affix from "ui/affix";
 import Space from "ui/space";
 
-import { ShoppingOutlined } from "@ant-design/icons";
+import { ShoppingOutlined, ShoppingTwoTone } from "@ant-design/icons";
 
 import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor";
 import withStoreLayout from "components/store/withStoreLayout";
 import MenuItemCard from "components/store/menuItemCard";
+import CartControls from "components/store/cartControls";
 
 const { TabPane } = Tabs;
 
 function storeMenu() {
   let array = ["12", "21", "23", "32"];
-
   configureAnchors({ offset: -200, scrollDuration: 400 });
+  const [visible, setVisible] = useState(false);
+
   return (
     <>
       <Row gutter={[8, 0]} style={{ margin: 0, padding: "0 10%" }}>
@@ -54,7 +57,7 @@ function storeMenu() {
               </Col>
               {array.map((a, i) => (
                 <Col xs={{ span: 24 }} lg={{ span: 12 }}>
-                  <MenuItemCard key={i} />
+                  <MenuItemCard key={i} showModal={setVisible} />
                 </Col>
               ))}
             </Row>
@@ -69,7 +72,7 @@ function storeMenu() {
               </Col>
               {array.map((a, i) => (
                 <Col xs={{ span: 24 }} lg={{ span: 12 }}>
-                  <MenuItemCard key={i} />
+                  <MenuItemCard key={i} showModal={setVisible} />
                 </Col>
               ))}
             </Row>
@@ -84,7 +87,7 @@ function storeMenu() {
               </Col>
               {array.map((a, i) => (
                 <Col xs={{ span: 24 }} lg={{ span: 12 }}>
-                  <MenuItemCard key={i} />
+                  <MenuItemCard key={i} showModal={setVisible} />
                 </Col>
               ))}
             </Row>
@@ -99,7 +102,7 @@ function storeMenu() {
               </Col>
               {array.map((a, i) => (
                 <Col xs={{ span: 24 }} lg={{ span: 12 }}>
-                  <MenuItemCard key={i} />
+                  <MenuItemCard key={i} showModal={setVisible} />
                 </Col>
               ))}
             </Row>
@@ -132,12 +135,53 @@ function storeMenu() {
                 </Button>,
               ]}
             >
-              <ShoppingOutlined style={{ fontSize: 45 }} />
-              <span>Your cart is empty choose an item to get started</span>
+              {/* <ShoppingOutlined style={{ fontSize: 45 }} />
+              <span>Your cart is empty choose an item to get started</span> */}
+              <Empty image={<ShoppingTwoTone twoToneColor="#f06543" style={{ fontSize: 60 }} />} description="Your cart is empty. Choose an item to get started" />
             </Card>
           </Affix>
         </Col>
       </Row>
+      <Modal
+        centered
+        visible={visible}
+        onOk={() => setVisible(false)}
+        onCancel={() => setVisible(false)}
+        width={'40%'}
+        bodyStyle={{
+          height: '80vh',
+          overflow: 'scroll',
+        }}
+        footer={<CartControls />}
+      >
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+      </Modal>
       <style jsx global>{`
         ul.menu-nav-container {
           list-style: none;
@@ -161,6 +205,16 @@ function storeMenu() {
 
         .ant-card-actions {
           background: #f06543;
+        }
+        .ant-modal-body::-webkit-scrollbar {
+          display: none;
+        }
+        .ant-modal-body {
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+        .ant-modal-footer {
+          text-align: center;
         }
       `}</style>
     </>

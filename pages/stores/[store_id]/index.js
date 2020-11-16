@@ -48,13 +48,13 @@ function StoreIndex({store_id}) {
                   justifyContent: 'center',
                   marginTop: 20,
                 }}>
-                  <Select defaultValue="jack" style={{ width: 160, marginRight: 10, color: '#ff3562' }} size="large">
+                  <Select defaultValue="jack" style={{ width: 160, marginRight: 10, color: '#f06543' }} size="large">
                     <Option value="jack">1:05PM (ASAP)</Option>
                     <Option value="lucy">2:00PM</Option>
                     <Option value="disabled">2:30PM</Option>
                     <Option value="Yiminghe">3:00PM</Option>
                   </Select>
-                  <Button type="link" size="large" style={{background: '#ff3562', color: 'white'}}>Start Order</Button>
+                  <Button type="link" size="large" style={{background: '#f06543', color: 'white'}}>Start Order</Button>
                 </div>
                 <div style={{
                   display: 'flex',
@@ -62,19 +62,19 @@ function StoreIndex({store_id}) {
                   justifyContent: 'center',
                   margin: '20px 0',
                 }}>
-                  <Link href={`./${store_id}/menu`}><a style={{color: '#ff3562', padding: 10}}>View menu</a></Link> <b>or</b> <Button type="link" style={{color: '#ff3562'}}>Buy gift card</Button>
+                  <Link href={`./${store_id}/menu`}><a style={{color: '#f06543', padding: 10}}>View menu</a></Link> <b>or</b> <Button type="link" style={{color: '#f06543'}}>Buy gift card</Button>
                 </div>
               </Card>
             </Col>
             <Col xs={{span: 24}} sm={{span: 24}} lg={{span: 12}} xl={{span: 12}}>
-              <Card bordered={false} style={{background: '#ff3562', height: '100%'}}></Card>
+              <Card bordered={false} style={{background: '#f06543', height: '100%'}}></Card>
             </Col>
           </Row>
           <Row gutter={16} style={{margin: 0, padding: 0, marginTop: 60}}>
             <Col xs={{span: 24}} sm={{span: 24}} lg={{span: 12}} xl={{span: 12}}>
               <Card title="Location" bordered={false}>
                 <p>Long store address, full</p>
-                <p><Link href="#" passHref><a style={{color: '#ff3562'}}>Driving Directions</a></Link> / <b>1.36mi</b></p>
+                <p><Link href="#" passHref><a style={{color: '#f06543'}}>Driving Directions</a></Link> / <b>1.36mi</b></p>
                 <p><b>(535) 512 873</b></p>
               </Card>
             </Col>
@@ -82,7 +82,7 @@ function StoreIndex({store_id}) {
               <Card title="Today's Hours" bordered={false}>
                 <p>Pickup <b style={{float: 'right', overflow: "hidden"}}>10:00am - 9:00pm</b></p>
                 <p>Delivery <b style={{float: 'right', overflow: "hidden"}}>11:00am - 8:00pm</b></p>
-                <p><Link href="#" passHref><a style={{color: '#ff3562'}}>See Full Schedule</a></Link></p>
+                <p><Link href="#" passHref><a style={{color: '#f06543'}}>See Full Schedule</a></Link></p>
               </Card>
             </Col>
           </Row>
@@ -90,7 +90,7 @@ function StoreIndex({store_id}) {
         <Col xs={{span: 0}} sm={{span: 1}} md={{span: 2}} lg={{span: 3}} xl={{span: 4}}></Col>
         <style jsx global>{`
           .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
-            border: 1px solid #ff3562;
+            border: 1px solid #f06543;
           }
         `}</style>
       </Row>
