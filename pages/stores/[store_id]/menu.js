@@ -216,6 +216,14 @@ function storeMenu() {
         .ant-modal-footer {
           text-align: center;
         }
+        .ant-card-hoverable:hover {
+          border-color: #f06543;
+          box-shadow: none;
+        }
+
+        .ant-card-hoverable:hover .ant-card-meta-title {
+          color: #f06543;
+        }
       `}</style>
     </>
   );
