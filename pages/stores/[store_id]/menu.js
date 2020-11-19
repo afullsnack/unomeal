@@ -14,7 +14,7 @@ import { ShoppingOutlined, ShoppingTwoTone } from "@ant-design/icons";
 import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor";
 import withStoreLayout from "components/store/withStoreLayout";
 import MenuItemCard from "components/store/menuItemCard";
-import CartControls from "components/store/cartControls";
+import ItemControls from "components/store/itemControls";
 
 const { TabPane } = Tabs;
 
@@ -152,7 +152,7 @@ function storeMenu() {
           height: '80vh',
           overflow: 'scroll',
         }}
-        footer={<CartControls />}
+        footer={<ItemControls />}
       >
         <p>some contents...</p>
         <p>some contents...</p>

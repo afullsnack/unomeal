@@ -3,7 +3,7 @@ import Button from "ui/button";
 import Space from "ui/space";
 import { PlusOutlined, MinusOutlined } from "@ant-design/icons"
 
-export default function CartControls() {
+export default function ItemControls() {
   const [qty, setQty] = useState(1);
   return (
     <>
