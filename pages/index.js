@@ -8,8 +8,6 @@ import Link from 'next/link';
 // import layout HOC
 import withLayout from '../components/withLayout';
 
-
-
 class Index extends Component {
    
 
