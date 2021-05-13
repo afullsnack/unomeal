@@ -3,7 +3,7 @@ import { withSession, expressSession } from "next-session";
 import dbConnection from "../../lib/db";
 import Note from "../../models/Note";
 
-const MongoStore = require("connect-mongo")(expressSession);
+// const MongoStore = require("connect-mongo")(expressSession);
 const conx = dbConnection();
 
 const options = {};
@@ -14,10 +14,10 @@ async function handler(req, res) {
     options = {
       name: "unomeal.sid",
       secret: "sessionSecret",
-      store: new MongoStore({
-        mongooseConnection: conx,
-        ttl: 14 * 24 * 60 * 60,
-      }),
+      // store: new MongoStore({
+      //   mongooseConnection: conx,
+      //   ttl: 14 * 24 * 60 * 60,
+      // }),
       cookie: {
         httpOnly: true,
         maxAge: 14 * 24 * 60 * 60, // expires in 14 days
